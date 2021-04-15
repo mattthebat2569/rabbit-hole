@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Very Epic Blog</title>
+        <style>
+            body{
+                background-color: rgb(255, 183, 197);
+            }
+            h2 {
+                color:rgb(255, 92, 100); 
+            }
+            p {
+                color: rgb(255, 255, 255);
+                font-family: monospace;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1>Zero Two's Blog</h1>
+
+        <h3>Contents</h3>
+        <ul>
+            <li><a href= "#entry1">Rain Review #1</a></li>
+            <li><a href = "#entry2">Proof that sqrt(2) is Irrational using Induction</a></li>
+        </ul>
+        
+        <h2 id="entry1">Rain Review #1</h2>
+        <h6>by Zero Two, Apr 11, 2021, 8:20 PM</h6>
+        
+        <p>So today it was super dark and like super cloudy so I was hyped for some torrential downpour. Rain didn’t come for a long time and when it did, it was extremely disappointing. It rained like, so little that there was still some spots that were completely dry on my driveway. To be honest, I wouldn’t even call this rain, this was more like a very light drizzle. Also, you know how everything smells nice after it rains? Yeah it didn’t smell like that after it rained so that was another disappointing aspect. At least the rain felt nice and sounded nice?<br><br>
+
+Rating: 2/10, very disappointing overall, still felt nice tho so it’s not the worst
+</p>
+
+        <h2 id="entry2">Proof that sqrt(2) is Irrational using Induction</h2>
+        <h6>by Zero Two, Apr 13, 2021, 9:39 AM</h6>
+        <p>We wish to prove for all positive integers $n$ that there is no positive integer $a$ such that $\sqrt2 = \frac{n}{a}$. Let $f(n)$ be the statement such that there is no positive integer $a$ such that $\sqrt2 = \frac{n}{a}$.
+Base Step: $f(1)$ is true because $\sqrt2 > 1 \geq \frac{1}{a}$ for all positive integers $a$.
+Inductive Step: Assume that $f(x)$ is true for all $x \leq k$, where $k$ is some positive integer. We will now prove that $f(k+1)$ is true by contradiction. Assume that $\sqrt2 = \frac{k+1}{a}$. We then have
+\[a\sqrt2 = k + 1\]\[2a^2 = (k+1)^2\]. This implies $(k+1)^2$ is even and so $(k+1)$ is also even. We can let $(k+1)$ be $2i$, where $i$ is a positive integer. Then we have
+\[2a^2 = (2i)^2\]\[2a^2 = 4i^2\]\[a^2 = 2i^2 \]. This tells us that $a$ is even and so we can let $a = 2t$, for some positive integer $t$. We then substitute our values for $a$ and $k+1$ back into the original equation.
+\[\sqrt2 = \frac{2i}{2s}\]\[\sqrt2 = \frac{i}{s}\]. But since $i \leq k$, we have a contradiction and so we are done. $\blacksquare$</p>
+        
+        
+    </body>
+</html>
