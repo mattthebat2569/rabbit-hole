@@ -1,0 +1,27 @@
+<body>
+
+<label for="password">Password:</label>
+<input id="password" type="text" />
+<input id="Button1" type="button" value="Run" onclick="passcheck()" />
+<p id="result">
+  result:
+</p>
+<script> 
+document.getElementById(“password”).focus();
+
+
+function passcheck(){
+        var password= document.getElementById(“password”).value;
+
+         if(password == 'bruh'){
+            alert('smh');
+        }else{
+            alert('invalid password');
+         }
+     }
+
+ function changeFont(){
+   document.getElementById('your element id').fontSize= “30px”
+ }
+</script>
+</body>
