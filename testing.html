@@ -1,11 +1,9 @@
 <body>
 
-<label for="password">Password:</label>
+
 <input id="password" type="text" />
-<input id="Button1" type="button" value="Run" onclick="passcheck()" />
-<p id="result">
-  result:
-</p>
+<input id="Button1" type="button" value="Continue" onclick="passcheck()" />
+<p>aasdf</p>
 <script> 
 document.getElementById(“password”).focus();
 
@@ -13,11 +11,13 @@ document.getElementById(“password”).focus();
 function passcheck(){
         var password= document.getElementById(“password”).value;
 
-         if(password == 'bruh'){
-            alert('smh');
+         if(password == bruh){
+            var smh = getElementByTagName(p);
+				smh.innerHTML = "correct"
         }else{
             alert('invalid password');
          }
+     }
      }
 
  function changeFont(){
