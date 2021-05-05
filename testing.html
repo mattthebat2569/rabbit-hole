@@ -1,27 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login page</title>
+</head>
 <body>
-
-
-<input id="password" type="text" />
-<input id="Button1" type="button" value="Continue" onclick="passcheck()" />
-<p>aasdf</p>
-<script> 
-document.getElementById(“password”).focus();
-
-
-function passcheck(){
-        var password= document.getElementById(“password”).value;
-
-         if(password == bruh){
-            var smh = getElementByTagName(p);
-				smh.innerHTML = "correct"
-        }else{
-            alert('invalid password');
-         }
-     }
-     }
-
- function changeFont(){
-   document.getElementById('your element id').fontSize= “30px”
- }
+<form>
+    <input type="form" id="pswd">
+    <input type="button" value="Continue" onclick="checkPswd();" />
+</form>
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "bruh";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="welcome.html";
+        }
+        else{
+            alert("Incorrect");
+        }
+    }
 </script>
 </body>
+</html>
