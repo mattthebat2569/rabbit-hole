@@ -47,5 +47,22 @@ Ekli to het lark ta arkbe of day isgrian<br>
 Romf uslnle rheta isnsg nmysh ta eeanvh’s aegt;<br>
 Ofr yth etswe evol brmedreeme hcus thelwa snibrg<br>
 Taht neht I <span class="whitetext">scorn</span> ot nhecag my taest hiwt niksg.</p></div>
+<form class ="answerbox">
+			<input type="form" id="pswd">
+			<input type="button" value="Continue" onclick="checkPswd();" />
+			</form>
+
+				<script type="text/javascript">
+					function checkPswd() {
+						var confirmPassword = "29";
+						var password = document.getElementById("pswd").value;
+						if (password == confirmPassword) {
+							 window.location="becareful.html";
+						}
+						else{
+							alert("Incorrect");
+						}
+					}
+				</script>
     </body>
 </html>
