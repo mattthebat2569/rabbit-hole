@@ -40,7 +40,8 @@
     var score; 
     var duration = 5; 
     var startTime; 
-    var ended = true; 
+    var ended = true;
+	var stuff = document.getElementById("content");
     var timerTxt = document.getElementById("timer");
     var scoreTxt = document.getElementById("score");
     var clicksTxt = document.getElementById("clicks");
@@ -78,7 +79,7 @@
 	setTimeout(function() {
 		if (clicsBySeconds > 20){
 		alert("congrats");
-		goon();
+		stuff.textContent = "logic.html";
 		}
 		else{
 		alert("bad lol");
