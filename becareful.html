@@ -69,6 +69,7 @@
         }
       }, 1);
   }
+	  
   function endGame() {
     var clicsBySeconds = (score / duration).toFixed(2);
     timerTxt.textContent = duration.toFixed(3);
@@ -76,7 +77,8 @@
     show(startBtn);
 	setTimeout(function() {
 		if (clicsBySeconds > 20){
-		alert("filler text");
+		alert("congrats");
+		goon();
 		}
 		else{
 		alert("bad lol");
