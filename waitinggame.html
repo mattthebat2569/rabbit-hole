@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>patience</title>
+		<style>
+		h1 {
+			color: rgb(255,255,255);
+			text-align: center;
+			font-size: 80px;
+		}
+		body {
+		background-color: rgb(0,0,0);
+		}
+		.answerbox{
+			position: absolute;
+			text-align: center;
+			bottom: 700px;
+			
+		}
+		</style>
+    </head>
+    <body>
+    <div>
+        <h1>
+            <span id="countdown">2</span>
+			<form class ="answerbox">
+			<input type="form" id="pswd">
+			<input type="button" value="Continue" onclick="window.location = 'redherring.html'"/>
+			</form>
+        </h1>
+    </div>
+  <script>
+  var countdown = document.getElementById("countdown");
+  var countItDown = function() {
+    var currentTime = parseFloat(countdown.textContent);
+    if (currentTime > 0) {
+       countdown.textContent = currentTime - 1;   
+    } else {
+        window.location="youwaited";
+    }
+    };
+	var timer = window.setInterval(countItDown, 1000);
+  </script>
+
+    </body>
+</html>
