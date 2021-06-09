@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>click</title>
+<style>
+  body {
+  background-color: rgb(0,0,0);
+  }
+  #content {
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+	color: rgb(255,255,255);
+  }
+
+  #clickarea {
+    width: 40px;
+    height : 20px;
+    font-size: 5px;
+	margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 5px;
+	background-color: rgb(255,255,255);
+}
+</style>
+</head>
+<body>
+  <div id="content">
+    Timer: <span id="timer"></span><br/>
+    Score: <span id="score"></span><br/>
+    Clicks/s: <span id="clicks"></span>
+  </div>
+  <div id="clickarea">
+    <button id="start">click</button>
+  </div>
+  <script type="text/javascript">
+    var score; 
+    var duration = 5; 
+    var startTime; 
+    var ended = true;
+	var stuff = document.getElementById("content");
+    var timerTxt = document.getElementById("timer");
+    var scoreTxt = document.getElementById("score");
+    var clicksTxt = document.getElementById("clicks");
+    var startBtn = document.getElementById("start");
+    var clickArea = document.getElementById("clickarea");
+    var show = function(elem) {
+      elem.style.display = 'inline';
+    };
+    var hide = function(elem) {
+      elem.style.display = 'none';
+    };
+    function startGame() {
+	  hide(startBtn);
+      score = -1;
+      ended = false;
+      startTime = new Date().getTime();
+      var timerId = setInterval(function() {
+        var total = (new Date().getTime() - startTime) / 1000;
+        if (total < duration) {
+          timerTxt.textContent = total.toFixed(3);
+          clicksTxt.textContent = (score / total).toFixed(2);
+        } else {
+          ended = true;
+          clearInterval(timerId);
+          endGame();
+        }
+      }, 1);
+  }
+  
+  function endGame() {
+    var clicsBySeconds = (score / duration).toFixed(2);
+    timerTxt.textContent = duration.toFixed(3);
+    clicksTxt.textContent = clicsBySeconds;
+    show(startBtn);
+	setTimeout(function() {
+		if (clicsBySeconds > 20){
+		alert("Click");
+		stuff.textContent = "logic.html";
+		}
+		else{
+		alert("Click");
+		}}, 10);
+}
+  startBtn.addEventListener("click", function(e) {
+    startGame();
+  });
+  clickArea.addEventListener("click", function(e) {
+    if (!ended) {
+      score++;
+      scoreTxt.textContent = score;
+    }
+  });
+</script>
+</body>
+</html>
