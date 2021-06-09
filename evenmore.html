@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>i promise this is the last</title>
+		<style>
+		body{
+			background-color: rgb(0,0,0);
+			}
+		.question2 {
+			text-align: center;
+			color: rgb(255,255,255);
+			font-size: 40px;
+		}
+		.puzzle {
+		color: rgb(255,255,255);
+		text-align: center;
+		font-size: 30px;
+		}
+		</style>
+    </head>
+    <body>
+		<div class="question2"><h1>find x</h1></div>
+		<div class="puzzle"><p>7+5 = 0</p><br>
+		<p>23+237 = 1</p><br>
+		<p>923476529+92378342 = 0</p><br>
+		<p>2323450+3^23 = 0</p><br>
+		<p>2394^2394+1000^23659870892038749 = 1</p><br>
+		<p>e^{pi * i}+420^69187= x</p><br></div>
+<form class ="answerbox">
+			<input type="form" id="pswd">
+			<input type="button" value="Continue" onclick="checkPswd();" />
+			</form>
+				<script type="text/javascript">
+					function checkPswd() {
+						var confirmPassword = "0";
+						var password = document.getElementById("pswd").value;
+						if (password == confirmPassword) {
+							 window.location="welcome.html";
+						}
+						else{
+							alert("Incorrect");
+						}
+					}
+				</script>
+    </body>
+</html>
