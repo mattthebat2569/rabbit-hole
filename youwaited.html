@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>red herring?</title>
+		<style>
+		body{
+			background-color: rgb(0,0,0);
+			}
+		#download {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 100px;
+			width: 500px
+		}
+		.question2 {
+			text-align: center;
+			color: rgb(255,255,255);
+			font-size: 40px;
+		}
+		.answerbox{
+			position: absolute;
+			text-align: center;
+			bottom: 250px;
+			
+		}
+		</style>
+    </head>
+    <body>
+		<div class="question2"><h1>happiness is key</h1></div>
+		<a href="encrypted.txt" download>
+			<img src="serpent.jpg" alt="cipher block chaining" id="download">
+</a>
+<form class ="answerbox">
+			<input type="form" id="pswd">
+			<input type="button" value="Continue" onclick="checkPswd();" />
+			</form>
+				<script type="text/javascript">
+					function checkPswd() {
+						var confirmPassword = "imgettingbored";
+						var password = document.getElementById("pswd").value;
+						if (password == confirmPassword) {
+							 window.location="welcome.html";
+						}
+						else{
+							alert("Incorrect");
+						}
+					}
+				</script>
+    </body>
+</html>
