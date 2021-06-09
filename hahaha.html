@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>more "math" >:)</title>
+		<style>
+		body{
+			background-color: rgb(0,0,0);
+			}
+		.question2 {
+			text-align: center;
+			color: rgb(255,255,255);
+			font-size: 40px;
+		}
+		.puzzle {
+		color: rgb(255,255,255);
+		text-align: center;
+		font-size: 30px;
+		}
+		</style>
+    </head>
+    <body>
+		<div class="question2"><h1>find x+y</h1></div>
+		<div class="puzzle">
+		<p>6+8 = 34</p><br>
+		<p>9+9 = 71</p><br>
+		<p>9+1 = -9</p><br>
+		<p>13+72 = 487</p><br>
+		<p>16+23 = 884</p><br>
+		<p>2+0 = x</p><br>
+		<p>187+4913 = y</div>
+<form class ="answerbox">
+			<input type="form" id="pswd">
+			<input type="button" value="Continue" onclick="checkPswd();" />
+			</form>
+				<script type="text/javascript">
+					function checkPswd() {
+						var confirmPassword = "-169";
+						var password = document.getElementById("pswd").value;
+						if (password == confirmPassword) {
+							 window.location="evenmore.html";
+						}
+						else{
+							alert("Incorrect");
+						}
+					}
+				</script>
+    </body>
+</html>
