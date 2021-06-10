@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>:(</title>
+		<style>
+		body{
+			background-color: rgb(0,0,0);
+			}
+		.puzzle2 {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+			width: 600px
+		}
+		.question2 {
+			text-align: center;
+			color: rgb(255,0,0);
+			font-size: 40px;
+		}
+		</style>
+    </head>
+    <body>
+		<div class="question2"><h1>GO AWAY!!!</h1></div>
+		<img src="scream.gif" class="puzzle2"></img>
+<audio id="audio" controls autoplay loop style="display:none">
+  <source src="scream.ogg">
+</audio>
+<button value="Continue" onclick="window.location = 'jumpscare2.html'">No</button>
+    </body>
+	<script>
+	document.addEventListener('click', musicPlay);
+	function musicPlay() {
+    document.getElementById('audio').play();
+    document.removeEventListener('click', musicPlay);
+}
+
+	</script>
+</html>
